@@ -1,10 +1,15 @@
 import React from 'react';
+import Nav from './Nav';
+import SearchForm from './SearchForm';
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <h1>
-      This is the header
-    </h1>
+    <div>
+      <h1>React Gallery</h1>
+      <SearchForm />
+      <Nav />
+    </div>
+
   )
 }
 
