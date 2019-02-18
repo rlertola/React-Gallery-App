@@ -3,6 +3,7 @@ import NotFound from './NotFound';
 import GalleryItem from './GalleryItem';
 
 const Gallery = (props) => {
+  // console.log(props.data);
   const results = props.data;
   let images;
   let url;
@@ -16,7 +17,6 @@ const Gallery = (props) => {
   } else {
     images = <NotFound />
   }
-
 
   return (
     <div className="photo-container">
