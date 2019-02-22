@@ -1,10 +1,10 @@
 import React from 'react';
-import NotFound from './NotFound';
 import GalleryItem from './GalleryItem';
+import NoSearchResults from './NoSearchResults';
 
 const Gallery = (props) => {
-  // console.log(props.data);
   const results = props.data;
+  let loading = props.loading;
   let images;
   let url;
 
@@ -15,15 +15,12 @@ const Gallery = (props) => {
       return <GalleryItem url={url} key={image.id} />
     })
   } else {
-    images = <NotFound />
+    images = <NoSearchResults />
   }
 
   return (
     <div className="photo-container">
-      <h2>Results</h2>
-      <ul>
-        {images}
-      </ul>
+      {(loading) ? <h2>Loading...</h2> : <ul>{images}</ul>}
     </div>
   )
 }
