@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Treehouse Project 7 - React Flickr Gallery App
 
-## Available Scripts
+Going for the exceeds expectations grade.
 
-In the project directory, you can run:
+This project was built using React with React-Router, and Axios for data fetching. Running npm start launches the app.
 
-### `npm start`
+This app allows you to view a gallery of flickr images by entering a keyword in the search box, or by selecting one of the default navlinks.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The 3 navlinks take you to default search terms, or you can search for anything using the input. Please see comments in the code for more info.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Components
+**App.js** - Main component. Holds the two axios request functions; 1 for searches, and another calls the 4 initial requests on page load.
+**ErrorPage.js** - Renders a 404 error page when a bad url is entered.
+**Gallery.js** - Gets the url from the data and makes a GalleryItem component for each. Displays those, or the NoSearchResults component.
+**GalleryItem.js** - Contains each image that fills the gallery.
+**Header.js** - Contains the SearchForm and Nav components.
+**Nav.js** - Contains all the navlinks.
+**NoSearchResults.js** - This page loads when there are no results for a given keyword.
+**SearchButton.js** - The performSearch function is called when this is clicked.
+**SearchForm.js** - Contains the search box and button.
 
-### `npm test`
+#### Routes
+The page is routed using react-router-dom. There is a route for each of the navlinks, and search. The search navlink doesn't have to be selected to search. Once the search button is clicked, the page will switch to the search navlink and path.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Config.js File
+Holds the flickr api key. Connects to the axios fetch in the App component.
 
-### `npm run build`
+#### Loading Message
+A "Loading..." message will show when the page is refreshed, or when a new term is searched. Once the data is loaded, the search term will display in place of loading.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### CSS Changes
+Changed font in the title, and the size of the search input and button. Also added a flickr favicon.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

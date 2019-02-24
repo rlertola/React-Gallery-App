@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displayes from the SearchForm component.
 const SearchButton = () => {
   return (
     <button type="submit" className="search-button">

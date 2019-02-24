@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays from the Gallery component.
 const NoSearchResults = () => {
   return (
     <li className="not-found">

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// For when a bad url is entered.
 const ErrorPage = () => {
   return (
     <div>
