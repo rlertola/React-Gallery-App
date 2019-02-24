@@ -12,7 +12,7 @@
 /build
 
 # misc
-css-TEMPLATE/
+
 .DS_Store
 .env.local
 .env.development.local
@@ -24,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 config.js
+
