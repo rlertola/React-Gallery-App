@@ -1,5 +1,7 @@
 # Treehouse Project 7 - React Flickr Gallery App
 
+Live demo: https://rlertola.github.io/react-gallery-app/#/
+
 Going for the exceeds expectations grade.
 
 This project was built using React with React-Router, and Axios for data fetching. Running npm start launches the app.

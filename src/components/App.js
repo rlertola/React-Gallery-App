@@ -81,6 +81,7 @@ class App extends Component {
   }
 
   // Each route is passed data, loading and title states to the Gallery component.
+  // **HashRouter is used so that it can be deployed to gh-pages with no errors.
   render() {
     return (
       <HashRouter basename="/react-gallery-app">
