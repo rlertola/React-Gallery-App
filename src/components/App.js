@@ -83,7 +83,7 @@ class App extends Component {
   // Each route is passed data, loading and title states to the Gallery component.
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/react-gallery-app">
         <div className="container">
           <Header onSearch={this.performSearch} />
           <Switch>
