@@ -5,7 +5,7 @@ import apiKey from '../config';
 
 // React-router-dom components.
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch
 } from 'react-router-dom';
@@ -83,7 +83,7 @@ class App extends Component {
   // Each route is passed data, loading and title states to the Gallery component.
   render() {
     return (
-      <BrowserRouter basename="/react-gallery-app">
+      <HashRouter basename="/react-gallery-app">
         <div className="container">
           <Header onSearch={this.performSearch} />
           <Switch>
@@ -100,7 +100,7 @@ class App extends Component {
             <Route component={ErrorPage} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
